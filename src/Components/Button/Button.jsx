@@ -8,8 +8,9 @@ const StyledButton = styled.button`
   border: ${props => props.boderColor ? `1px solid ${props.boderColor}` : "none"};
   border-radius: 40px;
   background: ${props => props.bgColor};
-  font-weight: 500;
+  font-weight: ${props => `${props.fontWeight}`};
   line-height: 21px;
+  color: #747475;
   color: ${props => props.textColor};
   color: ${props => props.fontSize};
   img {
@@ -17,24 +18,24 @@ const StyledButton = styled.button`
   }
 `;
 export const Button = ({ width, height, textColor, bgColor, boderColor, percent, fontSize, children, ...rest }) => {
-    return <StyledButton
-        percent={percent}
-        width={width}
-        height={height}
-        textColor={textColor}
-        bgColor={bgColor}
-        boderColor={boderColor}
-        fontSize={fontSize}
-        {...rest}
-    >
-        {percent && <img src={percent < 0 ? redIcon : greeIcon} alt="arr"></img>}
-        {children}
-    </StyledButton>;
+  return <StyledButton
+    percent={percent}
+    width={width}
+    height={height}
+    textColor={textColor}
+    bgColor={bgColor}
+    boderColor={boderColor}
+    fontSize={fontSize}
+    {...rest}
+  >
+    {percent && <img src={percent < 0 ? redIcon : greeIcon} alt="arr"></img>}
+    {children}
+  </StyledButton>;
 }
 Button.defaultProps = {
-    bgColor: '#FFFFFF',
-    textColor: '#5429FF',
-    width: 128,
-    height: 46,
-    fontSize: 16,
+  bgColor: '#FFFFFF',
+  textColor: '#5429FF',
+  width: 128,
+  height: 46,
+  fontSize: 16,
 };

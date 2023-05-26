@@ -1,5 +1,13 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  background-color: #CAEAE6;
+  min-height: 100vh;
+  /* display: flex;
+  flex-direction: column; */
+  /* align-items: center;
+  justify-content: center; */
+  font-size: calc(10px + 2vmin);
+  color: white;
 
 }
 
@@ -14,16 +22,6 @@
   }
 }
 
-.App-header {
-  background-color: #CAEAE6;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
 .App-link {
   color: #61dafb;

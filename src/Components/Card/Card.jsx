@@ -24,10 +24,29 @@ const StyledCard = styled.div`
         line-height: 31px;
         color: #27262E;
         font-weight: 700;
+        margin-right: 5px;
     }
+
+.content{
+    font-size: 24px;
+    line-height: 31px;
+    color: #27262E;
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+.content-wrapper{
+    margin-bottom: 12px;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
 
 .amount-wrapper{
         margin-bottom: 12px;
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
     }
 
 .iconETH{
@@ -46,10 +65,10 @@ export const Card = ({ title, amount, content, percent }) => {
                         {amount}
                     </span> ETH
                 </div>
-                : <div>
-                    <span>{content}</span> %
+                : <div className='content-wrapper'>
+                    <span className='content'>{content}</span> %
                 </div>
         }
-        <Button percent={percent} boderColor="#E9E9E9">{percent}%</Button>
+        <Button fontWeight={700} percent={percent} boderColor="#E9E9E9">{percent}%</Button>
     </StyledCard>
 }
